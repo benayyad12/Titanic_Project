@@ -41,3 +41,21 @@ figure = plt.figure(figsize=(10,10))
 sns.heatmap(correlation_matrix,annot=True)
 plt.show()
 ```
+
+## help Function to calculate accuracy on train/test : 
+
+```python
+def model_(name_model):    
+    model = name_model()
+    model.fit(x_train,y_train)
+    prediction_train = model.predict(x_train)
+    accuracy_train = accuracy_score(prediction_train,y_train)
+    print('model : ',name_model, 'Accuracy on train : ',accuracy_train)
+    
+    
+    prediction_test = model.predict(x_test)
+    accuracy_test = accuracy_score(prediction_test,y_test)
+    print('model : ',name_model, 'Accuracy on test : ',accuracy_test)
+```
+
+    
