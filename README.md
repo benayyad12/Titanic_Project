@@ -47,14 +47,14 @@ plt.show()
 ```python
 def model_(name_model):    
     model = name_model()
-    model.fit(x_train,y_train)
-    prediction_train = model.predict(x_train)
-    accuracy_train = accuracy_score(prediction_train,y_train)
+    model.fit(x_train_vec,y_train)
+    prediction_train = model.predict(x_train_vec)
+    accuracy_train = accuracy_score(y_train,prediction_train)
     print('model : ',name_model, 'Accuracy on train : ',accuracy_train)
     
     
-    prediction_test = model.predict(x_test)
-    accuracy_test = accuracy_score(prediction_test,y_test)
+    prediction_test = model.predict(x_test_vec)
+    accuracy_test = accuracy_score(y_test,prediction_test)
     print('model : ',name_model, 'Accuracy on test : ',accuracy_test)
 ```
 
